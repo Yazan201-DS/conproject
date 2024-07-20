@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styleContacts.css" rel="stylesheet">
+  <title>Contacts List</title>
+</head>
+
+<body>
+  
+  <h1>CONTACTS LIST</h1>
+  
+  
+  <div class="modalinfo" id="myModalinfo" onclick="closeinfo(event)">
+    <button class="close-btn" id="closeinfoBtn" onclick="closeinfoModal(event)">&times;</button>
+    <ul class="contactinfo">
+      <li id="user-id">ID: </li>
+      <li id="name-id">Username: </li>
+      <li id="phone-id">Phone: </li>
+      <li id="address-id">Address: </li>
+      <li id="email-id">E-mail: </li>
+    </ul>
+  </div>
+  
+  
+  <ul class="list">
+    <li class="addLi"><button class="addbtn" id="addBtn" onclick="openAddModal()">+</button>
+    </li>
+      <li class="addLi"><button class="addbtn" id="deleList" onclick="deleteTheList()">Delete List</button>
+      </li>
+    </ul>
+
+  <div class="modal" id="myModal" onclick="closeModal(event)">
+    
+    
+    <div class="modal-content">
+      <button class="close-btn" id="closeModalBtn" onclick="EditContact(event)">Save & Exit</button>
+      <h2>CONTACT INFO</h2>
+      <p>EDIT CONTACT</p>
+      <input type="text" placeholder="ID" id="inputUserId">
+      <input type="text" placeholder="Name" id="inputUserName">
+      <input type="text" placeholder="Phone" id="inputUserPhone">
+      <input type="text" placeholder="Address" id="inputUserAddress">
+      <input type="text" placeholder="Email" id="inputUserEmail">
+      <!-- <button id="SaveThEdit" onclick="saveUserInfoAfterEdit()">Save</button> -->
+    </div>
+  </div>
+  <div class="AddModal" id="add-modal">
+    <button class="close-btn" id="closeAddBtn" onclick="closeAddModal(event)">&times;</button>
+    <h2>Welcome New Contact</h2>
+      <p>Add Contact</p>
+      <input type="text" placeholder="ID" id="inputId">
+      <input type="text" placeholder="Name" id="inputName">
+      <input type="text" placeholder="Phone" id="inputPhone">
+      <input type="text" placeholder="Address" id="inputAddress">
+      <input type="text" placeholder="Email" id="inputEmail">
+      <button class="save-btn" id="SaveContact" onclick="SavingContact()">Save</button>
+
+  </div>
+  <script src="jsContacts.js"></script>
+</body>
+
+</html>
